@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-@Transactional
+
 public class AreaDaoTest {
 
     @Autowired
@@ -25,7 +25,7 @@ public class AreaDaoTest {
 
     @Test
     public void queryAllArea() {
-        System.out.println(areaDao.queryAllArea());
+        System.out.println(areaDao.queryAllArea()+"------------------------------");
     }
 
     @Test
@@ -52,7 +52,7 @@ public class AreaDaoTest {
     @Test
     public void updateArea(){
         Area area = new Area();
-        area.setId(5);
+        area.setId(1);
         area.setPriority(2);
         System.out.println(areaDao.updateArea(area));
     }
